@@ -1,0 +1,57 @@
+body {
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.add-post {
+    margin-top: 24px;
+}
+
+.add-post__textarea {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 6px;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    resize: vertical;
+}
+
+.add-post__button {
+    font-size: 24px;
+}
+
+.records {
+    margin-top: 24px;
+}
+
+.record {
+    padding: 18px 30px 24px;
+    border-radius: 12px;
+    background: #effaff;
+}
+
+.record + .record {
+    margin-top: 24px;
+}
+
+.record__date {
+    margin-bottom: 6px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.record__content img {
+    max-width: 100%;
+}
+
+.record__content p:last-child {
+    margin-bottom: 0;
+}
