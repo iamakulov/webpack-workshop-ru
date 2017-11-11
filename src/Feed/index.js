@@ -1,3 +1,8 @@
+import _ from 'lodash';
+import moment from 'moment';
+import {markdown} from 'markdown';
+import './index.css';
+
 // 1. Fetch the new data
 fetch('/data')
     .then(res => res.json())
@@ -7,17 +12,17 @@ fetch('/data')
 
 // 2. Setup adding new posts
 const addPostForm = document.querySelector('#add-post');
-addPostForm.addEventListener('submit', () => {
+addPostForm.addEventListener('submit', (event) => {
+    event.preventDefault();
     const content = addPostForm.querySelector('.add-post__textarea').value;
-    addNewRecord(window.markdown.toHTML(content));
+    addNewRecord(markdown.toHTML(content));
 });
 
 // 3. Methods
 const renderData = (data) => {
     const target = document.querySelector('#records');
 
-    const html = window._(data.items)
-        .map(item => generateRecord(item.date, window.markdown.toHTML(item.content)))
+    const html = _.map(data.items, item => generateRecord(item.date, markdown.toHTML(item.content)))
         .join('');
 
     target.innerHTML += html;
