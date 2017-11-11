@@ -7,7 +7,8 @@ fetch('/data')
 
 // 2. Setup adding new posts
 const addPostForm = document.querySelector('#add-post');
-addPostForm.addEventListener('submit', () => {
+addPostForm.addEventListener('submit', (event) => {
+    event.preventDefault();
     const content = addPostForm.querySelector('.add-post__textarea').value;
     addNewRecord(window.markdown.toHTML(content));
 });
