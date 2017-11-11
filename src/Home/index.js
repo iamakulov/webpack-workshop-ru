@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const birthday = moment([2017, 10, 1]);
 
 const updateDate = () => {

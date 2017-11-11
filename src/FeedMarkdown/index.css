@@ -1,23 +1,23 @@
-.record {
+.record_markdown {
     padding: 18px 30px 24px;
     border-radius: 12px;
     background: #effaff;
 }
 
-.record + .record {
+.record_markdown + .record_markdown {
     margin-top: 24px;
 }
 
-.record__date {
+.record_markdown__date {
     margin-bottom: 6px;
     font-style: italic;
     font-size: 12px;
 }
 
-.record__content img {
+.record_markdown__content img {
     max-width: 100%;
 }
 
-.record__content p:last-child {
+.record_markdown__content p:last-child {
     margin-bottom: 0;
 }

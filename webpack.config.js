@@ -5,10 +5,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production';
 
 const basicConfig = {
-    entry: './src/Feed/index.js',
+    entry: {
+        home: './src/Home/index.js',
+        feed: './src/Feed/index.js'
+    },
     output: {
-        path: path.resolve(__dirname, 'public', 'feed'),
-        filename: 'bundle.js'
+        path: path.resolve(__dirname, 'public', 'assets'),
+        filename: '[name].js'
     },
     module: {
         rules: [
@@ -54,11 +57,14 @@ if (isProduction) {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': 'production',
         }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common'
+        })
     ]);
 } else {
     basicConfig.devServer = {
         contentBase: path.join(__dirname, "public"),
-        publicPath: '/feed/',
+        publicPath: '/assets/',
         compress: true,
         port: 9000,
         proxy: {

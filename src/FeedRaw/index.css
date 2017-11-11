@@ -1,0 +1,23 @@
+.record_raw {
+    padding: 18px 30px 24px;
+    border-radius: 12px;
+    background: #ffefef;
+}
+
+.record_raw + .record_raw {
+    margin-top: 24px;
+}
+
+.record_raw__date {
+    margin-bottom: 6px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.record_raw__content img {
+    max-width: 100%;
+}
+
+.record_raw__content p:last-child {
+    margin-bottom: 0;
+}

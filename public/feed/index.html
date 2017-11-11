@@ -4,17 +4,15 @@
         <meta charset="utf-8" />
         <title>Records | MarkdownFeed™</title>
         <link rel="stylesheet" href="./style.css" />
-        <link rel="stylesheet" href="./feed.css" />
+        <link rel="stylesheet" href="/assets/feed.css" />
     </head>
     <body>
         <div class="content">
             <h1 class="page-header"><a href="/">MarkdownFeed™</a></h1>
-            <form id="add-post" class="add-post" action="#">
-                <textarea class="add-post__textarea" placeholder="Write in Markdown"></textarea>
-                <input class="add-post__button" type="submit" value="Add a record">
-            </form>
+            <a href="#markdown">Markdown</a> · <a href="#raw">Raw</a>
             <div id="records" class="records"></div>
         </div>
-        <script src="./bundle.js"></script>
+        <script src="/assets/common.js"></script>
+        <script src="/assets/feed.js"></script>
     </body>
 </html>

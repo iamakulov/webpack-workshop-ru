@@ -1,0 +1,1 @@
+webpackJsonp([1],{39:function(e,t,n){"use strict";var u=n(11),o=function(e){return e&&e.__esModule?e:{default:e}}(u),i=(0,o.default)([2017,10,1]);!function e(){var t=(0,o.default)().diff(i,"seconds",!0);document.querySelector("#time").textContent=t.toFixed(3),requestAnimationFrame(e)}()}},[39]);
