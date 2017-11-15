@@ -55,7 +55,7 @@ if (isProduction) {
         new webpack.optimize.UglifyJsPlugin(),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': 'production',
+            'process.env.NODE_ENV': '"production"',
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common'
